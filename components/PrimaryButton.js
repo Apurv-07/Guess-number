@@ -23,6 +23,7 @@ const Styles=StyleSheet.create({
       elevation: 10,
         justifyContent: 'center',
       height: '100%',
+      
     },
     innertext:{
       color: 'whitesmoke',

@@ -3,10 +3,7 @@ import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
 import PrimaryButton from '../components/PrimaryButton'
 import {Shadow} from 'react-native-shadow-2'
 
-function Firstscreen(){
-  function newfun(){
-    console.log("My new function")
-  }
+function Firstscreen(props){
   var [text, setText]=useState('')
   var confirming=()=>{
     if(text){
@@ -20,6 +17,8 @@ function Firstscreen(){
           }}])
       }else{
         console.log("All Good")
+        console.log(props)
+        props.onpick(text);
       }
     }else{
       Alert.alert(
